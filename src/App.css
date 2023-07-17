@@ -1,0 +1,9 @@
+.Reaction{
+    color: hsl(0, 100%, 67%);
+    background-color: hsla(0, 100%, 67%, 0.05) ;
+}
+
+.Memory {
+    color: hsl(39, 100%, 56%);
+    background-color: hsl(39, 100%, 56%, 0.05) ;
+}
