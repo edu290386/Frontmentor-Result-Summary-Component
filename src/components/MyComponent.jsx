@@ -4,7 +4,7 @@ import InformationComponent from './InformationComponent'
 
 const MyComponent = () => {
   return (
-    <div className="border-black border flex-none md:flex ">
+    <div className="border-black border flex flex-col h-screen md:flex-row ">
         <ImageComponent />
         <InformationComponent />
     </div>

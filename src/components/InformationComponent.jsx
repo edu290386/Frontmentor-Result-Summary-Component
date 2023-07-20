@@ -1,24 +1,34 @@
-import data from './data.json'
+import data from '../helpers/data.json'
+import { useState } from 'react'
 
 
 const InformationComponent = () => {
-
+  const [detailData, setDetailData] = useState(data)
 
   return (
-    <section className=" font-hanken w-[350px] h-[420px] mx-auto  border">
-        <div className=' text-left my-6'>Summary</div>
-        <article className='px-5 py-4 rounded-xl border '>
-            <div className={data[0].category}>
-            <div className='flex justify-between '>
-                <div><img src={data[0].icon} alt="" /><span>Reaction</span></div>
-                <div className='text-green-600'>{data[0].score}/100</div>
+    <section className=" font-hanken w-[350px] h-[420px] mx-auto ">
+    <div className=' text-left mt-5 mb-6'>Summary</div>
+    <article className='px-5'>
+      {detailData.map((item, index) => (
+        <div key={index} className={item.category}>
+            <div className='flex justify-between items-center my-4 mx-3'>
+              <div className='flex gap-3 my-3'>
+                <img src={item.icon} className='block' alt="" />
+                <span>{item.category}</span>
+              </div>
+              <div className='flex gap-x-2 text-[#46547e]'>
+                <div className=' font-bold'>{item.score}</div>
+                <div className=' text-gray-400'>/ 100</div>
+              </div>
             </div>
-            </div>
-           
-           
-        </article>
-    </section>
-  )
+        </div> 
+      ))}
+    </article>
+    <div className='flex justify-center'>
+      <button className='bg-[#46547e] text-white text-sm mt-3 py-3 w-[300px] rounded-3xl '>Continue</button>
+    </div>
+</section>
+)
 }
 
 export default InformationComponent
