@@ -1,12 +1,10 @@
 
 import ImageComponent from './ImageComponent'
-import InformationComponent from './InformationComponent'
 
 const MyComponent = () => {
   return (
-    <div className="border-black border flex flex-col h-screen md:flex-row ">
+    <div className="h-screen flex justify-center">
         <ImageComponent />
-        <InformationComponent />
     </div>
   )
 }
