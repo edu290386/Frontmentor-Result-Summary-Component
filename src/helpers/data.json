@@ -12,11 +12,11 @@
   {
     "category": "Verbal",
     "score": 61,
-    "icon": "src/assets/images/icon-verbal.svg"
+    "icon": "/assets/images/icon-verbal.svg"
   },
   {
     "category": "Visual",
     "score": 72,
-    "icon": "../src/assets/images/icon-memory.svg"
+    "icon": "assets/images/icon-memory.svg"
   }
 ]
